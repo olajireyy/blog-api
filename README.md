@@ -20,7 +20,7 @@ A RESTful API built with ASP.NET Core 10 and Entity Framework Core. Handles blog
 
 1. Clone the repo
    ```bash
-   git clone https://github.com/yourusername/blog-api.git
+   git clone https://github.com/olajireyy/blog-api.git
    cd blog-api
    ```
 
@@ -115,4 +115,4 @@ For production, set these as environment variables instead of appsettings:
 
 ## Related
 
-- [blog-client](https://github.com/yourusername/blog-client) — React frontend for this API
+- [blog-client](https://github.com/olajireyy/blog-client) — React frontend for this API
