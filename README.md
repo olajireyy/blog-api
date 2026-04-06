@@ -1,5 +1,3 @@
-# BlogApi
-
 # Blog API
 
 A RESTful API built with ASP.NET Core 10 and Entity Framework Core. Handles blog post management with JWT authentication and per-user post ownership.
@@ -21,18 +19,18 @@ A RESTful API built with ASP.NET Core 10 and Entity Framework Core. Handles blog
 ### Installation
 
 1. Clone the repo
-```bash
-   git clone https://github.com/olajireyy/blog-api.git
+   ```bash
+   git clone https://github.com/yourusername/blog-api.git
    cd blog-api
-```
+   ```
 
 2. Install dependencies
-```bash
+   ```bash
    dotnet restore
-```
+   ```
 
 3. Add your JWT secret to `appsettings.Development.json`
-```json
+   ```json
    {
      "Jwt": {
        "Key": "your-secret-key-minimum-32-characters-long",
@@ -40,17 +38,17 @@ A RESTful API built with ASP.NET Core 10 and Entity Framework Core. Handles blog
        "Audience": "BlogClient"
      }
    }
-```
+   ```
 
 4. Run migrations
-```bash
+   ```bash
    dotnet ef database update
-```
+   ```
 
 5. Run the API
-```bash
+   ```bash
    dotnet run
-```
+   ```
 
 API runs on `http://localhost:7174` by default.
 
@@ -77,7 +75,10 @@ API runs on `http://localhost:7174` by default.
 ## Authentication
 
 This API uses JWT Bearer tokens. After registering or logging in, include the token in every protected request:
+
+```
 Authorization: Bearer your-token-here
+```
 
 ## Ownership Rules
 
@@ -86,6 +87,8 @@ Authorization: Bearer your-token-here
 - Attempting to edit or delete another user's post returns `403 Forbidden`
 
 ## Project Structure
+
+```
 BlogApi/
 ├── Controllers/
 │   ├── AuthController.cs     # Register and login endpoints
@@ -98,6 +101,7 @@ BlogApi/
 ├── Migrations/                # EF Core migration files
 ├── appsettings.json           # App config (no secrets)
 └── Program.cs                 # App setup, middleware, DI
+```
 
 ## Environment Variables
 
@@ -111,4 +115,4 @@ For production, set these as environment variables instead of appsettings:
 
 ## Related
 
-- [blog-client](https://github.com/olajireyy/blog-client) — React frontend for this API
+- [blog-client](https://github.com/yourusername/blog-client) — React frontend for this API
